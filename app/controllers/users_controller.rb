@@ -31,7 +31,6 @@ class UsersController < ApplicationController
     else
       erb :'users/login'
     end
-    flash[:message] = "Login failure. Incorrect username or password, please try again."
    end
 
   post '/login' do
