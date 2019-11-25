@@ -17,7 +17,7 @@ class UsersController < ApplicationController
         session[:user_id] = user.id
         redirect '/tweets'
       else
-        flash[:message] = "Login failure. Incorrect username or password, please try again."
+
         redirect '/signup'
       end
     else
@@ -31,6 +31,7 @@ class UsersController < ApplicationController
     else
       erb :'users/login'
     end
+    flash[:message] = "Login failure. Incorrect username or password, please try again."
    end
 
   post '/login' do
