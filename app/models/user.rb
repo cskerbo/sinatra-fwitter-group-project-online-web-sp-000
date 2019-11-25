@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   def slug
-    artist_name = self.name
+    artist_name = self.username
       slug = artist_name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   end
 
